@@ -1,8 +1,11 @@
 # try-aws-cdk-openid-github-actions
 
-GitHub Actions の OpenID Connect を使用して AWS CDK のデプロイを実行してみる。
+GitHub Actions の OpenID Connect を使用して AWS CDK で VPC を作成してみる。
 
 ## 1. VPC を作成する CDK を用意しておく。
+
+<details>
+<summary>開く</summary>
 
 プロジェクト作成する。
 
@@ -39,6 +42,8 @@ $ aws-vault exec oppara-dev -- cdk deploy
 ```
 $ aws-vault exec oppara-dev -- cdk destroy
 ```
+
+</details>
 
 ## 2. IDプロバイダの追加
 
@@ -92,8 +97,13 @@ cdk-deploy-policy
 }
 ```
 
-作成した cdk-deploy-policy にチェックを入れて、[次へ]をクリック。
-ロール名 'cdk-openid-github-actions-role' を入力してロールを作成。
+作成した `cdk-deploy-policy` にチェックを入れて、[次へ]をクリック。
+ロール名 `cdk-openid-github-actions-role` を入力してロールを作成。
+
+## 5. GitHub Actions の設定
+
+https://github.com/oppara/try-aws-cdk-openid-github-actions/blob/main/.github/workflows/try.yaml
+
 
 ## 参考
 
