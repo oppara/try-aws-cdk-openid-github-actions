@@ -1,33 +1,27 @@
 {
   "name": "try-aws-cdk-openid-github-actions",
   "version": "0.1.0",
-  "bin": {
-    "try-aws-cdk-openid-github-actions": "bin/try-aws-cdk-openid-github-actions.js"
-  },
   "scripts": {
     "build": "tsc",
     "watch": "tsc -w",
     "test": "jest",
-    "cdk": "cdk",
-    "deploy": "cdk deploy --require-approval never"
+    "deploy": "cdk deploy --require-approval never",
+    "cdk": "cdk"
   },
   "devDependencies": {
-    "@types/jest": "^26.0.10",
-    "@types/node": "10.17.27",
-    "@typescript-eslint/eslint-plugin": "^5.13.0",
-    "@typescript-eslint/parser": "^5.13.0",
-    "aws-cdk": "2.15.0",
-    "eslint": "^8.10.0",
-    "eslint-config-prettier": "^8.4.0",
-    "jest": "^26.4.2",
-    "prettier": "^2.5.1",
-    "ts-jest": "^26.2.0",
-    "ts-node": "^9.0.0",
-    "typescript": "~3.9.7"
+    "@types/jest": "^30",
+    "@types/node": "^24.10.1",
+    "jest": "^30",
+    "ts-jest": "^29",
+    "aws-cdk": "2.1124.1",
+    "ts-node": "^10.9.2",
+    "typescript": "~5.9.3"
   },
   "dependencies": {
-    "aws-cdk-lib": "2.80.0",
-    "constructs": "^10.0.76",
-    "source-map-support": "^0.5.16"
+    "aws-cdk-lib": "^2.255.0",
+    "constructs": "^10.5.0"
+  },
+  "overrides": {
+    "brace-expansion": "2.0.3"
   }
 }
